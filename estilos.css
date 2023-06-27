@@ -7,7 +7,7 @@ body {
   padding: 20px;
   background-color: #B6B8B6;
 	border: solid #E3E3E3;
-	border-radius: 5px;  
+	border-radius: 8px;  
 }
 
 #datos_usuario{
@@ -17,14 +17,14 @@ body {
 h1 {
   color: #F6F6F6;
   padding: 10px;
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 10px;
   text-align: left;
 }
 h3 {
   color: #F6F6F6;
   padding: 10px;
-  font-size: 30px;
+  font-size: 27px;
   margin-bottom: 10px;
   text-align: left;
 }
