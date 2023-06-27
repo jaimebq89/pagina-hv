@@ -5,7 +5,7 @@ body {
   font-family: Georgia;
   margin: 30px;
   padding: 20px;
-  background-color: #B6B8B6;
+  background-color: #9D9D9D; /*B6B8B6*/
   border: solid #D7CECE;
 }
 
@@ -36,7 +36,7 @@ h3 {
 }
 
 h2 {
-  color: #D9AD14;
+  color: #9D9D9D;
   margin-bottom: 10px;
 }
 
