@@ -21,13 +21,6 @@ h1 {
   margin-bottom: 10px;
   text-align: left;
 }
-h3 {
-  color: #F6F6F6;
-  padding: 10px;
-  font-size: 27px;
-  margin-bottom: 10px;
-  text-align: left;
-}
 
 .section {
   margin-bottom: 20px;
@@ -42,7 +35,19 @@ h2 {
   color: #004f6d;
   margin-bottom: 10px;
 }
-
+h3 {
+  color: #F6F6F6;
+  padding: 10px;
+  font-size: 27px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+h4 {
+  color: #F6F6F6;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
 p {
   margin-bottom: 10px;
   color: #0C0000;
