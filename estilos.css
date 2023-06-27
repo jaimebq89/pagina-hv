@@ -1,17 +1,26 @@
 @charset "utf-8";
 /* CSS Document */
+
 body {
   font-family: Georgia;
-  margin: 0;
+  margin: 30px;
   padding: 20px;
-  background-color: #EAD296;
+  background-color: #B6B8B6;
+  border: solid #D7CECE;
 }
+
 #datos_usuario{
 	padding: 10px;
 	float:right;
 }
 h1 {
-  color: #333;
+  color: #F6F6F6;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+h3 {
+  color: #F6F6F6;
   padding: 10px;
   margin-bottom: 10px;
   text-align: left;
@@ -23,6 +32,7 @@ h1 {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border: solid #D7CECE;
 }
 
 h2 {
@@ -35,23 +45,24 @@ p {
   color: #666;
 }
 #profile-picture {
-  padding: 10px;
+	width: 75%;
+  	padding: 10px;
 	text-align: center;
-  margin-bottom: 20px;
-	float: left;
+  	margin-bottom: 20px;
+	
 }
 
 #profile-picture img {
   max-width: 200px;
   border-radius: 50%;
-	
+  border: solid #D7CECE;	
 }
 .two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-	float: left;
-	
+  float: left;
+  border: solid #D7CECE;
 }
 
 .column {
