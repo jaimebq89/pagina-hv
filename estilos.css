@@ -6,7 +6,8 @@ body {
   margin: 30px;
   padding: 20px;
   background-color: #B6B8B6;
-  
+	border: solid #AAA8A8;
+	border-radius: 5px;  
 }
 
 #datos_usuario{
@@ -49,8 +50,7 @@ p {
   	padding: 10px;
 	text-align: center;
   	margin-bottom: 20px;
-	border: solid #D7CECE;
-	border-radius: 5px;
+
 }
 
 #profile-picture img {
@@ -63,7 +63,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   float: left;
-  border: solid #D7CECE;
+  border: solid #AAA8A8;
 }
 
 .column {
