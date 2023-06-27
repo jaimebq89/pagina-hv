@@ -6,7 +6,7 @@ body {
   margin: 30px;
   padding: 20px;
   background-color: #B6B8B6;
-	border: solid #AAA8A8;
+	border: solid #E3E3E3;
 	border-radius: 5px;  
 }
 
@@ -56,14 +56,14 @@ p {
 #profile-picture img {
   max-width: 200px;
   border-radius: 50%;
-  border: solid #D7CECE;	
+  border: solid #E3E3E3;	
 }
 .two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   float: left;
-  border: solid #AAA8A8;
+  border: solid #E3E3E3;
 }
 
 .column {
