@@ -1,74 +1,1626 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Jaime Bedoya - Control Engineer</title>
-	<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaime A. Bedoya Quintero | Control & Energy Engineer</title>
+    <meta name="description" content="Control & Monitoring Engineer, energy markets specialist focused on project development and automation solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --background: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --primary: #0ea5e9;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .navbar {
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        .navbar.scrolled {
+            padding: 0.75rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--background) 0%, #e0f2fe 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .hero-greeting {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .hero-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .typing-container {
+            display: inline-block;
+        }
+
+        .typing-text {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: var(--secondary);
+            margin-left: 2px;
+            animation: blink 1s infinite;
+            vertical-align: text-bottom;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .hero-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), #0284c7);
+            color: white;
+            box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile-card {
+            width: 350px;
+            height: 420px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+        }
+
+        .profile-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+            border: 4px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .profile-title {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .profile-contact {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .section-title span {
+            color: var(--secondary);
+        }
+
+        /* Skills Section */
+        .skills {
+            background: var(--card-bg);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--background);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.375rem 0.875rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        /* Experience Section */
+        .experience {
+            background: var(--background);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--secondary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--card-bg);
+            border: 3px solid var(--secondary);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            padding: 0.375rem 1rem;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-company {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+            list-style-position: inside;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: var(--card-bg);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--background);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-header {
+            height: 8px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            padding: 0.25rem 0.625rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .project-metric {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .metric-icon {
+            color: var(--accent);
+        }
+
+        .metric-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Education Section */
+        .education {
+            background: var(--background);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .education-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            border-color: var(--secondary);
+        }
+
+        .education-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .education-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .education-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-date {
+            color: var(--secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Languages Section */
+        .languages {
+            background: var(--card-bg);
+        }
+
+        .languages-grid {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            text-align: center;
+        }
+
+        .language-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .language-level {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .language-badge {
+            display: inline-block;
+            padding: 0.375rem 1rem;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary), #1e293b);
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon-large {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .contact-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-visual {
+                order: 1;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                margin: 0 auto 2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .profile-card {
+                width: 300px;
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card-bg);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .hero {
+                padding: 5rem 1rem 3rem;
+            }
+
+            .hero-name {
+                font-size: 2rem;
+            }
+
+            .hero-title {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-card {
+                width: 260px;
+                height: 320px;
+            }
+
+            .profile-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 0.75rem 1.25rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<div id="profile-picture">
-      	<img src="profile.jpeg" alt="Fotografía">
-	<section id="datos_usuario">
-		<h1>JAIME A. BEDOYA QUINTERO</h1>
-		<h3>Control Engineer, Energy Specialist</h3>
-		<h4>Phone: (+57) 321 632 6485<br>Email: jaimebedoyaq@gmail.com<br>LinkedIn@jaime-bedoya-quintero</h4>	
-	</section>
-	</div>
-				
-<div class="section two-columns" id="two-columns">
-	
-  	<div class="column">
-	<h2>Professional profile</h2>
-    	<p>Control & Monitoring Engineer, energy markets specialist. Focused on the development of projects, generation of solutions, product and service offerings</p>
-        <p>With experience in design, structuring and development of electrical and electronic solutions projects, for industrial control and management, programming control equipment, operation and maintenance for several industries in Colombia.</p>
-	
-	<h2>Technological Tools</h2>
-    	<p>PLCs programming and comissioning: OMRON (CP1L, CP2E, CJ2M, NX1P2, NJ301) SIEMENS (S7-1200, S7-1500), MITSUBISHI (FX1S, FX2N, FX3 Series), SCHNEIDER(Twido Telemecanique TWDLCAA, Modicon MD221), WAGO (750-881,842,830), DELTA (Series DTC & DTE), HMI (KTP700 Siemens, Weintek, Omron NB, NS, NA, Wecon, DELTA TP series), Variable Speed/Frequency Drives  (Siemens, DELTA, Eaton, INVT, Omron, Yaskawa), Servo drives (R7D-AP and Smart step 2 series), Protection Relays (Eaton, Schneider, LOVATO), AI Vision Systems (Autovision Microscan Cameras, FHV Cameras for Artificial Vision on Automation). <br> Programming Languages: Ladder IEC 61131, SCADAs (Indusoft Supervisory Control and Data Adquisition Software), C++, HTML, CSS, Javascript, IoT solutions for Industry 4.0 (Node RED programming solutions for OEE, KPI, Energy Management). Ethernet communications, Modbus TCP, PROFINET protocols. IT knowledge, setting networking ethernet devices, LAN, VLAN, WAN, VPN, IPv4 addressing, routers & network switch setting. <br> AUTOCAD electrical drawing, Excel, Project, PPT (office).</p>
-		
-	<h2>Languages</h2>
-	<p>English Advanced Level (C1)</p>  
-	
-	<h2>Education</h2>
-   	<p> Post-degree - Energy Markets Specialization - National University of Colombia, 2018 - 2019, Medellin headquarters</p>
-	<p> College - Control Engineering - National University of Colombia, 2007 - 2013, Medellin headquarters</p>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">JB</div>
+                <span>Jaime Bedoya</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-	
-  	<p>Project Management Course with Microsoft Project - National University of Colombia -2017</p>
-	<p>Basic Course Software Building Management BMS - NETx Automation Software GmbH - 2015</p>
-	<p>Basic certification course KNX Partner - Building Automation, KNX Association - 2013</p>
-	<p>Teleinformatics network and IT courses I- IV. CISCO Networking Academy, 160 Hours - National University of Colombia. 2009-2011</p>
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Jaime A. Bedoya Quintero</h1>
+                <h2 class="hero-title">
+                    <span class="typing-container">
+                        <span class="typing-text" id="typingText"></span><span class="cursor"></span>
+                    </span>
+                </h2>
+                <p class="hero-description">
+                    Control & Monitoring Engineer and Energy Markets Specialist with extensive experience in industrial automation, project development, and energy optimization solutions. Passionate about implementing innovative technologies that drive efficiency and sustainability.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">
+                        <i class="fas fa-briefcase"></i> View Experience
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card">
+                    <div class="profile-avatar">JB</div>
+                    <h2 class="profile-name">Jaime Bedoya</h2>
+                    <p class="profile-title">Control & Energy Engineer</p>
+                    <div class="profile-contact">
+                        <a href="tel:+573216326485" class="contact-icon" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="/cdn-cgi/l/email-protection#fc969d9591999e999893859d8dbc9b919d9590d29f9391" class="contact-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/jaime-bedoya-quintero" target="_blank" class="contact-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<h2>References</h2>
-    	<p>Fernando Peralta V. Electrical engineer, Mitsumo de Colombia. CEO. <br> Phone: 315 4188582</p>
-	<p>Vanessa Lara P. Chemical Engineer, Xtampar & Xtampar. CEO. <br> Phone: 311 8737150</p>
-	<p>Héctor A. Bedoya Giraldo. Specialist in the design of electrical networks on roads and buildings for public entities, Power networks (energy and telecommunications)<br> Phone: 3113184203<p>Juan Fernando Ospina, Electromechanical Deparment., NavalCAT S.A., Design and Supervision.<br> Phone: 313 2074865 </p>
-	<p>Milton Velasquez, Generation Dpmt, Industria de Alimentos Zenú, Electromechanic and Power Systems mainteinance<br> Phone: 311 326 2611</p>		
-	</div>
-	
-  	<div class="column">
-	
-		
-	<h2>Work history</h2>
-	<p>2023-currently: Project Engineer at Multicontrol Ltda, PLC & HMI programming, inductive, capacitive, photoelectric sensors and AI vision systems configuration and assistance, electrical control and OMRON PLC Programming, variable drives speed configuration and commisioning, IoT controller & dashboards programming for OEE and Energy management solutions for industry.</p>
-	<p>2022-2023: Development of automation projects in cross-cutting and profile-forming machines due to technological updating of PLC, HMI and repowering of electrical panel, automatic operation tests and improvements in production time, METAZA Company - YUMBO (Cali).<br> PLC-HMI system programming for gas detection control in pumping stations, Ecopetrol. <br> Design of photovoltaic connection systems for luxury yachts, specification of solar panels, hybrid inverters, batteries, protections and wiring, NavalCAT Colombia.</p>
-	<p>2020-2021: Development of building lighting projects, installation and commissioning of the CCTV system for the El Faro - Rionegro - ANT residential unit.<br> Maintenance supervision and lead of medium voltage substations in the companies Industria de Alimentos Zenú, Papelsa, Compañía NAL de Chocolates, NOEL, among others.</p>
-    	<p>2014-2020: Projects Engineer At Mitsumo de Colombia S.A.S., in the exercise of functions oriented to the supply of equipment, consultancies, installation, commissioning, support, maintenance of medium voltage substations, and after-sales service for electrical distribution systems, energy efficiency, automation systems, and power quality</p>
-	<p>2009 - 2011: Design office engineering assistant<br> Engineering analyst in lighting designs, internal electrical networks, voice and data networks, fire detection systems, electronic security, CCTV, among others. <br> Designs for Clinics, universities, shopping malls, among others. Lighting calculations by DIALux Software</p>
-		
-	<h2>Executed jobs</h2>	
-		<p>Supply, configuration, assembly and assistance for the start-up of 6 Eaton ETR4000 protection relays for differential protection of distribution transformers at 4,160 VAC at the Papelsa factory in Barbosa Antioquia. (2019)</p>
-		<p>Supply, installation and configuration of the energy metering system for the main substation, spinning warehouses, compressors, looms, services, etc. Plant Coltejer S.A. – Rionegro Headquarters. (2018)</p>
-		<p>Supply, installation and configuration of the energy measurement system of the main substation, finished product warehouses, laboratories, packing area. Santamarta Mills Plant – Santa Marta Headquarters. (2018).</p>
-		<p>Supply, installation, configuration and start-up of an automatic control system for solar water heating for the El Panama Hotel, Panama City. Client: MGM Innova Energy Services. (2017)</p>
-		<p>Supply and assistance for the commissioning of the 400 HP, 480 VAC Variable Speed Drive to improve the efficiency of a motor/fan system in the former Coltejer S.A. Thermal Generation Power Plant, Itagüí headquarters, generating savings of more than 60% in electrical consumption. (2016).</p>
-		<p>Supply and assistance for the installation and start-up of the SMARTWIRE Intelligent Wiring System - Pool control system. Contegral S.A. – Envigado Headquarters. (2015)</p>
-		<p>Service in the configuration of the KNX Automation system for lighting, motorized blinds, and presence sensors in the areas, in 7 blocks of the EAFIT University. Hiring: Infraestructura Digital S.A.S. (2015)</p>	
-	
-	</div>	
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Technical <span>Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="skill-title">PLCs & Controllers</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OMRON</span>
+                        <span class="skill-tag">SIEMENS S7-1200</span>
+                        <span class="skill-tag">SIEMENS S7-1500</span>
+                        <span class="skill-tag">MITSUBISHI</span>
+                        <span class="skill-tag">SCHNEIDER</span>
+                        <span class="skill-tag">WAGO</span>
+                        <span class="skill-tag">DELTA</span>
+                        <span class="skill-tag">Ladder IEC 61131</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="skill-title">HMI & SCADA</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">KTP700 Siemens</span>
+                        <span class="skill-tag">Weintek</span>
+                        <span class="skill-tag">Omron NB/NS/NA</span>
+                        <span class="skill-tag">Wecon</span>
+                        <span class="skill-tag">DELTA TP</span>
+                        <span class="skill-tag">Indusoft SCADA</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="skill-title">Variable Speed Drives</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SIEMENS</span>
+                        <span class="skill-tag">DELTA</span>
+                        <span class="skill-tag">Eaton</span>
+                        <span class="skill-tag">INVT</span>
+                        <span class="skill-tag">Omron</span>
+                        <span class="skill-tag">Yaskawa</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Node RED</span>
+                        <span class="skill-tag">IoT</span>
+                        <span class="skill-tag">Industry 4.0</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="skill-title">Networking & Protocols</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Ethernet</span>
+                        <span class="skill-tag">Modbus TCP</span>
+                        <span class="skill-tag">PROFINET</span>
+                        <span class="skill-tag">LAN/VLAN/WAN</span>
+                        <span class="skill-tag">VPN</span>
+                        <span class="skill-tag">IPv4</span>
+                        <span class="skill-tag">CISCO</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="skill-title">Software & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AUTOCAD</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Project</span>
+                        <span class="skill-tag">PowerPoint</span>
+                        <span class="skill-tag">Autovision</span>
+                        <span class="skill-tag">FHV Cameras</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>		
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Work <span>Experience</span></h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <span class="timeline-date">2023 - Present</span>
+                    <h3 class="timeline-title">Project Engineer</h3>
+                    <p class="timeline-company">Multicontrol Ltda</p>
+                    <ul class="timeline-description">
+                        <li>Leading automation and control projects for industrial clients</li>
+                        <li>PLC programming and HMI development</li>
+                        <li>Energy optimization solutions implementation</li>
+                    </ul>
+                </div>
+                <div class="timeline-item fade-in">
+                    <span class="timeline-date">2022 - 2023</span>
+                    <h3 class="timeline-title">Automation Projects Engineer</h3>
+                    <p class="timeline-company">METAZA, Ecopetrol, NavalCAT</p>
+                    <ul class="timeline-description">
+                        <li>Executed diverse automation projects across multiple industries</li>
+                        <li>Industrial control system integration</li>
+                        <li>Technical coordination with cross-functional teams</li>
+                    </ul>
+                </div>
+                <div class="timeline-item fade-in">
+                    <span class="timeline-date">2020 - 2021</span>
+                    <h3 class="timeline-title">Building & Lighting Projects</h3>
+                    <p class="timeline-company">Independent Consultant</p>
+                    <ul class="timeline-description">
+                        <li>Building automation system design</li>
+                        <li>Lighting control solutions</li>
+                        <li>Substation maintenance services</li>
+                    </ul>
+                </div>
+                <div class="timeline-item fade-in">
+                    <span class="timeline-date">2014 - 2020</span>
+                    <h3 class="timeline-title">Projects Engineer</h3>
+                    <p class="timeline-company">Mitsumo de Colombia S.A.S.</p>
+                    <ul class="timeline-description">
+                        <li>Led automation and electrical projects</li>
+                        <li>Energy metering and optimization systems</li>
+                        <li>Client relationship management</li>
+                        <li>KNX and BMS system implementations</li>
+                    </ul>
+                </div>
+                <div class="timeline-item fade-in">
+                    <span class="timeline-date">2009 - 2011</span>
+                    <h3 class="timeline-title">Design Office Engineering Assistant</h3>
+                    <p class="timeline-company">Engineering Office</p>
+                    <ul class="timeline-description">
+                        <li>Technical documentation support</li>
+                        <li>CAD design and drafting</li>
+                        <li>Project coordination assistance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <p class="section-subtitle">Key projects demonstrating expertise</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Eaton Protection Relays - Papelsa Factory</h3>
+                        <p class="project-description">Implementation of advanced protection relay systems for industrial power distribution, ensuring safety and reliability.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Eaton Relays</span>
+                            <span class="tech-tag">Protection Systems</span>
+                            <span class="tech-tag">Industrial</span>
+                        </div>
+                        <div class="project-metric">
+                            <i class="fas fa-check-circle metric-icon"></i>
+                            <span class="metric-text">2019</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-header"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Energy Metering System - Coltejer S.A.</h3>
+                        <p class="project-description">Comprehensive energy monitoring and metering infrastructure for textile manufacturing facility.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Energy Monitoring</span>
+                            <span class="tech-tag">SCADA</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-metric">
+                            <i class="fas fa-check-circle metric-icon"></i>
+                            <span class="metric-text">2018</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-header"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Energy Measurement - Santamarta Mills</h3>
+                        <p class="project-description">Installation of precision energy measurement systems for sugar mill operations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Energy Metrics</span>
+                            <span class="tech-tag">Industrial IoT</span>
+                            <span class="tech-tag">Agriculture</span>
+                        </div>
+                        <div class="project-metric">
+                            <i class="fas fa-check-circle metric-icon"></i>
+                            <span class="metric-text">2018</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-header"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Solar Water Heating Control - El Panama Hotel</h3>
+                        <p class="project-description">Smart control system for solar water heating optimization in hospitality sector.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Solar Energy</span>
+                            <span class="tech-tag">Building Automation</span>
+                            <span class="tech-tag">KNX</span>
+                        </div>
+                        <div class="project-metric">
+                            <i class="fas fa-leaf metric-icon"></i>
+                            <span class="metric-text">Sustainable Energy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-header"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">400 HP Variable Speed Drive - Coltejer</h3>
+                        <p class="project-description">Installation of high-power VFD for industrial motor control with significant energy savings.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Siemens VFD</span>
+                            <span class="tech-tag">Motor Control</span>
+                            <span class="tech-tag">Energy Efficiency</span>
+                        </div>
+                        <div class="project-metric">
+                            <i class="fas fa-bolt metric-icon"></i>
+                            <span class="metric-text">60% Energy Savings</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-header"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">KNX Automation - EAFIT University</h3>
+                        <p class="project-description">Complete building automation system implementation for modern educational facility.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">KNX</span>
+                            <span class="tech-tag">BMS</span>
+                            <span class="tech-tag">Lighting Control</span>
+                        </div>
+                        <div class="project-metric">
+                            <i class="fas fa-building metric-icon"></i>
+                            <span class="metric-text">2015</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Education & <span>Certifications</span></h2>
+                <p class="section-subtitle">Academic background and professional development</p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Energy Markets Specialization</h3>
+                        <p>National University of Colombia</p>
+                        <span class="education-date">2018 - 2019</span>
+                    </div>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Control Engineering</h3>
+                        <p>National University of Colombia</p>
+                        <span class="education-date">2007 - 2013</span>
+                    </div>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Project Management</h3>
+                        <p>Professional Course</p>
+                        <span class="education-date">2017</span>
+                    </div>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>BMS Software - NETx Automation</h3>
+                        <p>Certified Training</p>
+                        <span class="education-date">2015</span>
+                    </div>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>KNX Partner Certification</h3>
+                        <p>Building Automation Standard</p>
+                        <span class="education-date">2013</span>
+                    </div>
+                </div>
+                <div class="education-card fade-in">
+                    <div class="education-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>CISCO Networking Academy</h3>
+                        <p>CCNA Certification Track</p>
+                        <span class="education-date">2009 - 2011</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="languages">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Language <span>Skills</span></h2>
+                <p class="section-subtitle">Communication abilities</p>
+            </div>
+            <div class="languages-grid">
+                <div class="language-item fade-in">
+                    <h3 class="language-name">English</h3>
+                    <p class="language-level">Advanced Level</p>
+                    <span class="language-badge">C1 Certified</span>
+                </div>
+                <div class="language-item fade-in">
+                    <h3 class="language-name">Spanish</h3>
+                    <p class="language-level">Native</p>
+                    <span class="language-badge">Native</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon-large">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <a href="tel:+573216326485">+57 321 632 6485</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon-large">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="/cdn-cgi/l/email-protection#8fe5eee6e2eaedeaebe0f6eefecfe8e2eee6e3a1ece0e2"><span class="__cf_email__" data-cfemail="5b313a32363e393e3f34223a2a1b3c363a323775383436">[email&#160;protected]</span></a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/jaime-bedoya-quintero" target="_blank">@jaime-bedoya-quintero</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon-large">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Colombia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">JB</div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Jaime A. Bedoya Quintero. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+        }
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Typing Animation
+        const typingText = document.getElementById('typingText');
+        const roles = [
+            'Control Engineer',
+            'Energy Specialist',
+            'Automation Expert',
+            'Project Developer'
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                typingText.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                typingSpeed = 2000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typingSpeed = 500;
+            }
+
+            setTimeout(type, typingSpeed);
+        }
+
+        // Start typing animation
+        setTimeout(type, 1000);
+
+        // Scroll Animation (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-
