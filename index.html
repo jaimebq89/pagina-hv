@@ -2,203 +2,797 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>Jaime A. Bedoya Quintero | Controls & Automation Engineer | EPC Projects</title>
-
-<meta name="description" content="Controls & Automation Engineer specialized in PLC/SCADA systems, industrial process control, commissioning (FAT/SAT), EPC project execution, and project controls support (planning, scheduling, EVM)."/>
-
-<meta name="keywords" content="Controls Engineer, Automation Engineer, EPC projects, Mining automation, PLC programming, SCADA systems, Siemens TIA Portal, Allen Bradley Studio 5000, PID control, Process control systems, Instrumentation engineer, Commissioning engineer, FAT SAT, Loop checking, Industrial automation, DCS systems, MCC, VFD, Thermal systems, Vacuum systems, Industrial furnace control, Project Controls, Primavera P6, MS Project, Earned Value Management, EVM, Cost control, Schedule control, EPC engineering"/>
-
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jaime A. Bedoya Quintero | Controls &amp; Automation Engineer</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-
-<!-- =========================
-     YOUR ORIGINAL CSS (UNCHANGED)
-     ========================= -->
 <style>
-/* KEEPING YOUR ENTIRE CSS AS-IS */
-:root {
-    --primary: #0f172a;
-    --secondary: #0ea5e9;
-    --accent: #10b981;
-    --background: #f8fafc;
-    --card-bg: #ffffff;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --border: #e2e8f0;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-[data-theme="dark"] {
-    --primary: #0ea5e9;
-    --background: #0f172a;
-    --card-bg: #1e293b;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --border: #334155;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+            font-size: 14px;
+            line-height: 1.5;
+        }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+        .cv-page {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0;
+        }
 
-body {
-    font-family:'Inter', sans-serif;
-    background:var(--background);
-    color:var(--text-primary);
-    line-height:1.6;
-}
-</style>
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
 
+        .header-initials {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #0ea5e9, #10b981);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+
+        .header-info h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 0.15rem;
+            letter-spacing: -0.3px;
+        }
+
+        .header-info h2 {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #93c5fd;
+            margin-bottom: 0.6rem;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem 1.2rem;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .header-contact i {
+            color: #0ea5e9;
+            margin-right: 0.3rem;
+            width: 14px;
+            text-align: center;
+        }
+
+        .header-contact a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+        }
+
+        .header-contact a:hover {
+            color: #0ea5e9;
+        }
+
+        /* Body layout */
+        .cv-body {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 0;
+        }
+
+        .main-col {
+            padding: 1.5rem 2rem 1.5rem 2.5rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .side-col {
+            padding: 1.5rem 2rem;
+            background: #f8fafc;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0ea5e9;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #0ea5e9;
+        }
+
+        /* Summary */
+        .summary-text {
+            color: #475569;
+            font-size: 0.88rem;
+            line-height: 1.65;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 1.1rem;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .exp-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .exp-dates {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .exp-company {
+            font-size: 0.85rem;
+            color: #0ea5e9;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-bullets li {
+            font-size: 0.82rem;
+            color: #475569;
+            padding-left: 1rem;
+            position: relative;
+            margin-bottom: 0.2rem;
+            line-height: 1.5;
+        }
+
+        .exp-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #0ea5e9;
+            font-size: 0.75rem;
+            top: 0.1rem;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 1rem;
+        }
+
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.1rem;
+        }
+
+        .project-meta {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-desc {
+            font-size: 0.82rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 0.1rem 0.45rem;
+            background: #e0f2fe;
+            color: #0369a1;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        /* Sidebar sections */
+        .side-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .side-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #0ea5e9;
+            margin-bottom: 0.6rem;
+        }
+
+        /* Skills */
+        .skill-group {
+            margin-bottom: 0.7rem;
+        }
+
+        .skill-group-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .skill-tag {
+            padding: 0.15rem 0.5rem;
+            background: #e2e8f0;
+            color: #475569;
+            border-radius: 50px;
+            font-size: 0.68rem;
+            font-weight: 500;
+        }
+
+        .skill-tag.highlight {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        /* Languages */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .lang-name {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .lang-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            background: linear-gradient(135deg, #0ea5e9, #10b981);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .lang-detail {
+            font-size: 0.72rem;
+            color: #64748b;
+        }
+
+        .lang-note {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            margin-top: 0.25rem;
+            padding-left: 0.2rem;
+        }
+
+        /* Certifications */
+        .cert-item {
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .cert-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .cert-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+
+        .cert-detail {
+            font-size: 0.72rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        /* Education sidebar */
+        .edu-item {
+            margin-bottom: 0.7rem;
+        }
+
+        .edu-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+
+        .edu-school {
+            font-size: 0.72rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        /* Professional profile */
+        .profile-bullets {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-bullets li {
+            font-size: 0.82rem;
+            color: #475569;
+            padding-left: 1rem;
+            position: relative;
+            margin-bottom: 0.3rem;
+            line-height: 1.5;
+        }
+
+        .profile-bullets li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-size: 0.75rem;
+            font-weight: 800;
+            top: 0.05rem;
+        }
+
+        /* Hatch-specific targeting */
+        .hatch-target {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.78rem;
+            line-height: 1.6;
+        }
+
+        .hatch-target strong {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: rgba(255,255,255,0.5);
+            padding: 0.6rem 2.5rem;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                font-size: 12px;
+            }
+            .header {
+                padding: 1.5rem 2rem;
+            }
+            .cv-body {
+                grid-template-columns: 1fr 260px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .cv-body {
+                grid-template-columns: 1fr;
+            }
+            .main-col {
+                border-right: none;
+                padding: 1.5rem;
+            }
+            .side-col {
+                border-top: 1px solid #e2e8f0;
+                padding: 1.5rem;
+            }
+            .header {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
+<div class="cv-page">
 
-<!-- =========================
-     NAVBAR (UNCHANGED)
-     ========================= -->
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
-    <a class="logo" href="#"><div class="logo-icon">JB</div><span>Jaime Bedoya</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-initials">JB</div>
+        <div class="header-info">
+            <h1>Jaime A. Bedoya Quintero</h1>
+            <h2>Controls &amp; Automation Engineer</h2>
+            <div class="header-contact">
+                <span><i class="fas fa-phone"></i>+57 321 632 6485</span>
+                <span><i class="fas fa-envelope"></i><a href="mailto:jaimebedoyaq@gmail.com">jaimebedoyaq@gmail.com</a></span>
+                <span><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/jaime-bedoya-quintero" target="_blank">linkedin.com/in/jaime-bedoya-quintero</a></span>
+                <span><i class="fas fa-map-marker-alt"></i>Medellín, Colombia</span>
+            </div>
+        </div>
+    </header>
 
-<!-- =========================
-     HERO (ATS-OPTIMIZED TEXT ONLY)
-     ========================= -->
-<section class="hero" id="about">
-<div class="hero-container">
+    <!-- Hatch targeting tagline -->
+    <div style="background:#f0f9ff; padding: 0.5rem 2.5rem; border-bottom: 1px solid #e2e8f0;">
+        <p style="font-size:0.72rem; color:#0369a1; font-weight:600; margin:0;">
+            <i class="fas fa-bullseye" style="color:#0ea5e9; margin-right:0.3rem;"></i>
+            Applying for: <strong>Controls &amp; Automation Engineer</strong> — Hatch, Medellín · 5+ years project engineering · PLC/DCS · Instrumentation
+        </p>
+    </div>
 
-<div class="hero-content">
-<p class="hero-greeting">Hello, I'm</p>
-<h1 class="hero-name">Jaime A. Bedoya Quintero</h1>
+    <div class="cv-body">
 
-<h2 class="hero-title">Controls & Automation Engineer | EPC Projects | Industrial Systems</h2>
+        <!-- Main column -->
+        <div class="main-col">
 
-<p class="hero-description">
-Controls & Automation Engineer with experience in PLC/SCADA systems, industrial process control, commissioning (FAT/SAT), and EPC project execution environments. Skilled in PID tuning, control loop optimization, and industrial system troubleshooting across thermal and multi-zone processes. Experience supporting project controls activities including scheduling, progress tracking, and KPI reporting in EPC environments.
-</p>
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <p class="summary-text">
+                    Control and Automation Engineer with <strong>12+ years of experience</strong> in industrial automation, electrical systems, energy efficiency, instrumentation, industrial networking, and system commissioning. Proven track record across manufacturing, food &amp; beverage, energy, electrical infrastructure, and oil &amp; gas sectors. Expert in PLC/HMI programming, SCADA systems, VFD integration, IoT-based monitoring, and energy management solutions. C1 English certified — fully capable of working in global engineering teams.
+                </p>
+            </div>
+
+            <!-- Professional Profile for Hatch -->
+            <div class="section">
+                <div class="section-title">Why I Am a Strong Fit for Hatch</div>
+                <ul class="profile-bullets">
+                    <li><strong>PLC/DCS programming</strong> — OMRON (CP1H/CP2E/CJ/NX/NJ series), Siemens S7-1200/1500, plus integration experience with HMI, SCADA, and VFD systems up to 400 HP</li>
+                    <li><strong>Instrumentation &amp; field experience</strong> — Gas detection systems for Ecopetrol; industrial sensors, process transmitters, and calibration support on live sites</li>
+                    <li><strong>Energy efficiency &amp; digitization</strong> — OEE dashboards, KPI monitoring, energy metering, and IoT solutions built with Node-RED, MQTT, and industrial protocols</li>
+                    <li><strong>Commissioning &amp; start-up</strong> — Extensive hands-on site experience: installation supervision, configuration, start-up, and field support across multiple industries</li>
+                    <li><strong>Multidisciplinary projects</strong> — Coordination across electrical, automation, energy, and construction teams in complex industrial environments</li>
+                    <li><strong>C1 English</strong> — EF SET certified (LinkedIn verified); experience working with international clients, suppliers, and technical documentation in English</li>
+                    <li><strong>Strong technical foundation</strong> — IEC 61131 programming standard, Modbus TCP, PROFINET, Ethernet/IP familiarity; AutoCAD, MS Project, and engineering documentation</li>
+                </ul>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="section">
+                <div class="section-title">Work Experience</div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Project Engineer</span>
+                        <span class="exp-dates">2023 – Present</span>
+                    </div>
+                    <div class="exp-company">Multicontrol Ltda. · Medellín, Colombia</div>
+                    <ul class="exp-bullets">
+                        <li>Lead automation and control projects for industrial clients (manufacturing, food, energy)</li>
+                        <li>Full-scope PLC programming (OMRON, Siemens) and HMI development</li>
+                        <li>Energy optimization solutions: OEE dashboards, KPI monitoring, and IoT-based energy management</li>
+                        <li>Technical coordination with clients, vendors, and multidisciplinary teams</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Automation Projects Engineer</span>
+                        <span class="exp-dates">2022 – 2023</span>
+                    </div>
+                    <div class="exp-company">METAZA S.A.S. · Ecopetrol · NavalCAT · Colombia</div>
+                    <ul class="exp-bullets">
+                        <li>Executed diverse automation projects across multiple industry sectors</li>
+                        <li>Industrial control system integration and field commissioning</li>
+                        <li>Gas detection system design and implementation for Ecopetrol (critical safety system)</li>
+                        <li>Technical coordination with cross-functional engineering teams</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Building &amp; Lighting Automation Consultant</span>
+                        <span class="exp-dates">2020 – 2021</span>
+                    </div>
+                    <div class="exp-company">Independent · Colombia</div>
+                    <ul class="exp-bullets">
+                        <li>Building automation system design (BMS, KNX, DALI lighting)</li>
+                        <li>Substation maintenance and electrical distribution services</li>
+                        <li>Energy metering and optimization consulting</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Projects Engineer</span>
+                        <span class="exp-dates">2014 – 2020</span>
+                    </div>
+                    <div class="exp-company">Mitsumo de Colombia S.A.S. · Medellín, Colombia</div>
+                    <ul class="exp-bullets">
+                        <li>Led automation and electrical projects end-to-end for industrial clients</li>
+                        <li>Energy metering and sub-metering system design and deployment</li>
+                        <li>KNX and BMS (Building Management System) implementations</li>
+                        <li>Client relationship management and post-sale technical support</li>
+                        <li>Project planning, scheduling, and multidisciplinary coordination</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Design Office Engineering Assistant</span>
+                        <span class="exp-dates">2009 – 2011</span>
+                    </div>
+                    <div class="exp-company">Engineering Office · Colombia</div>
+                    <ul class="exp-bullets">
+                        <li>Technical documentation support and CAD drafting</li>
+                        <li>Project coordination assistance and engineering calculations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="section">
+                <div class="section-title">Featured Projects</div>
+
+                <div class="project-item">
+                    <div class="project-title">Gas Detection System — Ecopetrol</div>
+                    <div class="project-meta">OIL &amp; GAS · Critical Safety System · 2022</div>
+                    <div class="project-desc">Design and implementation of PLC-HMI-based gas detection and shutdown logic for a live oil &amp; gas facility. Critical safety integration with alarm management, fault handling, and emergency shutdown coordination.</div>
+                    <span class="tech-tag">OMRON PLC · HMI · Gas Sensors · Safety Logic · Commissioning</span>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Technological Upgrade — 2-Axis Arm X&amp;Z · GroupeSEB Andean</div>
+                    <div class="project-meta">MANUFACTURING · Motion Control · 2025</div>
+                    <div class="project-desc">Advanced motion control implementation for industrial 2-axis arm, integrated with feeding, marking, pressing, and edging system. OMRON servo axes, PLC, and HMI. Significantly improved production speed.</div>
+                    <span class="tech-tag">OMRON NX1P2 · Servo Motion · PLC &amp; HMI · Production Optimization</span>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Energy Measurement System — Sugar Mill</div>
+                    <div class="project-meta">FOOD &amp; BEVERAGE · Energy Management · 2018</div>
+                    <div class="project-desc">Installation and commissioning of energy measurement systems for industrial sugar mill facility. Industrial IoT platform with Node-RED, energy metrics, and building management software integration.</div>
+                    <span class="tech-tag">Energy Metering · Industrial IoT · Node-RED · Building Management</span>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">KNX Building Automation — EAFIT University</div>
+                    <div class="project-meta">BUILDING AUTOMATION · Smart Campus · 2015</div>
+                    <div class="project-desc">Complete BMS implementation: KNX protocol, DALI lighting control, presence sensors, and window curtain automation for a modern educational facility. Full system design and commissioning.</div>
+                    <span class="tech-tag">KNX · BMS · DALI Lighting · Presence Sensors</span>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Solar Water Heating Control — El Panama Hotel</div>
+                    <div class="project-meta">HOSPITALITY · Sustainable Energy · 2016</div>
+                    <div class="project-desc">Smart control system for solar water heating optimization with PLC/HMI and motor control. Temperature monitoring, pump control, and energy efficiency optimization.</div>
+                    <span class="tech-tag">Solar Energy · PLC &amp; HMI · Temperature Control · Sustainability</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="side-col">
+
+            <!-- English Proficiency -->
+            <div class="side-section">
+                <div class="side-section-title">Language Proficiency</div>
+
+                <div class="lang-item" style="margin-bottom:0.75rem;">
+                    <div>
+                        <div class="lang-name">English</div>
+                        <div class="lang-detail">C1 Advanced · EF SET Certified</div>
+                        <div class="lang-note">LinkedIn-verified · Fully proficient in technical English</div>
+                    </div>
+                    <span class="lang-badge"><i class="fas fa-certificate" style="font-size:0.65rem;"></i> C1</span>
+                </div>
+
+                <div class="lang-item">
+                    <div>
+                        <div class="lang-name">Spanish</div>
+                        <div class="lang-detail">Native</div>
+                    </div>
+                    <span class="lang-badge" style="background:#64748b;">L1</span>
+                </div>
+
+                <p style="font-size:0.68rem; color:#0369a1; margin-top:0.5rem; line-height:1.4;">
+                    <i class="fas fa-external-link-alt" style="font-size:0.6rem; margin-right:0.2rem;"></i>
+                    EF SET Certificate available on LinkedIn profile — verifiable credential, C1 score confirmed.
+                </p>
+            </div>
+
+            <!-- Education -->
+            <div class="side-section">
+                <div class="side-section-title">Education</div>
+
+                <div class="edu-item">
+                    <div class="edu-name">B.Sc. Control Engineering</div>
+                    <div class="edu-school">National University of Colombia<br/>2007 – 2013</div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-name">Specialization: Energy Markets</div>
+                    <div class="edu-school">National University of Colombia<br/>2018 – 2019</div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="side-section">
+                <div class="side-section-title">Certifications</div>
+
+                <div class="cert-item">
+                    <div class="cert-name">EF SET English Certificate</div>
+                    <div class="cert-detail">EF Education First · LinkedIn-verified<br/>C1 Advanced Score</div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-name">KNX Partner Certification</div>
+                    <div class="cert-detail">Building Automation Standard<br/>2013</div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-name">BMS Software — NETx Automation</div>
+                    <div class="cert-detail">Certified Training<br/>2015</div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-name">Project Management</div>
+                    <div class="cert-detail">Professional Course<br/>2017</div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-name">CISCO Networking Academy</div>
+                    <div class="cert-detail">CCNA Certification Track<br/>2009 – 2011</div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="side-section">
+                <div class="side-section-title">Technical Skills</div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">PLCs &amp; Controllers</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">OMRON NX/NJ/NX1P</span>
+                        <span class="skill-tag highlight">Siemens S7-1200/1500</span>
+                        <span class="skill-tag">Mitsubishi FX</span>
+                        <span class="skill-tag">Schneider</span>
+                        <span class="skill-tag">WAGO PFC</span>
+                        <span class="skill-tag">IEC 61131</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">HMI &amp; SCADA</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Siemens KTP</span>
+                        <span class="skill-tag">Weintek</span>
+                        <span class="skill-tag">Omron NB/NS</span>
+                        <span class="skill-tag">Indusoft SCADA</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">Drives &amp; Motion</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Siemens VFD</span>
+                        <span class="skill-tag">Delta VFD</span>
+                        <span class="skill-tag">Omron</span>
+                        <span class="skill-tag">Yaskawa</span>
+                        <span class="skill-tag">Up to 400 HP</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">Industrial Networking</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Ethernet Industrial</span>
+                        <span class="skill-tag highlight">Modbus TCP</span>
+                        <span class="skill-tag highlight">PROFINET</span>
+                        <span class="skill-tag">Ethernet/IP</span>
+                        <span class="skill-tag">VPN / VLAN</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">IoT &amp; Software</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Node-RED</span>
+                        <span class="skill-tag">Python (basics)</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">MQTT</span>
+                        <span class="skill-tag">Industrial IoT</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">Engineering Tools</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AutoCAD</span>
+                        <span class="skill-tag">MS Project</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">PowerPoint</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Differentiators -->
+            <div class="side-section">
+                <div class="side-section-title">Key Differentiators</div>
+                <ul class="profile-bullets" style="padding-left:0;">
+                    <li>12+ years of field &amp; project experience</li>
+                    <li>Hands-on commissioning expertise</li>
+                    <li>C1 English — global team ready</li>
+                    <li>Energy efficiency &amp; IoT specialist</li>
+                    <li>Multidisciplinary project coordination</li>
+                    <li>Strong OMRON &amp; Siemens PLC expertise</li>
+                </ul>
+            </div>
+
+            <!-- Links -->
+            <div class="side-section">
+                <div class="side-section-title">Online Presence</div>
+                <div style="font-size:0.75rem; line-height:1.8;">
+                    <div><i class="fab fa-linkedin" style="color:#0ea5e9; width:16px; text-align:center;"></i> <a href="https://linkedin.com/in/jaime-bedoya-quintero" target="_blank" style="color:#0369a1; text-decoration:none;">linkedin.com/in/jaime-bedoya-quintero</a></div>
+                    <div><i class="fas fa-code" style="color:#0ea5e9; width:16px; text-align:center;"></i> <a href="https://jaimebedoyaq.github.io/portfolio/" target="_blank" style="color:#0369a1; text-decoration:none;">GitHub Portfolio</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Jaime A. Bedoya Quintero · Controls &amp; Automation Engineer · Medellín, Colombia · Open to international opportunities
+    </footer>
 
 </div>
-
-</div>
-</section>
-
-<!-- =========================
-     SKILLS (ENRICHED EPC LAYER)
-     ========================= -->
-<section class="skills" id="skills">
-<div class="section-container">
-
-<h2 class="section-title">Technical Skills</h2>
-
-<div class="skills-grid">
-
-<div class="skill-category">
-<h3>Automation & Control</h3>
-<p>
-PLC (Siemens TIA Portal, Allen-Bradley Studio 5000), SCADA systems, HMI development, DCS fundamentals, industrial automation integration, EPC control systems
-</p>
-</div>
-
-<div class="skill-category">
-<h3>Process Control</h3>
-<p>
-PID tuning, loop optimization, thermal systems, vacuum systems, furnace control, process stabilization, industrial control systems engineering
-</p>
-</div>
-
-<div class="skill-category">
-<h3>Commissioning</h3>
-<p>
-FAT, SAT, loop checking, pre-commissioning, system validation, field troubleshooting, startup support in EPC environments
-</p>
-</div>
-
-<div class="skill-category">
-<h3>Project Controls</h3>
-<p>
-Primavera P6, MS Project, Earned Value Management (EVM), scheduling, cost tracking, KPI reporting, EPC project coordination
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- =========================
-     EXPERIENCE (HATCH ALIGNED)
-     ========================= -->
-<section class="experience" id="experience">
-<div class="section-container">
-
-<h2 class="section-title">Professional Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>Automation & Process Control Engineer</h3>
-<p><strong>Industrial / EPC Environment</strong></p>
-
-<ul>
-<li>Developed PLC-based control logic for industrial automation systems</li>
-<li>Performed PID tuning and control loop optimization for thermal processes</li>
-<li>Executed commissioning activities including FAT, SAT, loop checking, and troubleshooting</li>
-<li>Supported EPC-style project execution through scheduling coordination and technical reporting</li>
-<li>Improved process stability and reduced operational deviations through control system optimization</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- =========================
-     PROJECTS (EPC SCOPING LAYER)
-     ========================= -->
-<section class="projects" id="projects">
-<div class="section-container">
-
-<h2 class="section-title">Featured Projects</h2>
-
-<div class="project-card">
-<h3>Industrial Furnace Control Optimization (Vacuum & Thermal System)</h3>
-<p>
-Control logic improvements for material flow synchronization with furnace operating conditions. Enhanced multi-zone temperature stability and reduced process lag.
-</p>
-<p><strong>Scope:</strong> EPC industrial automation | thermal process control | PLC systems | instrumentation</p>
-</div>
-
-<div class="project-card">
-<h3>PID Control Optimization – Multi-Zone Heating System</h3>
-<p>
-Optimization of PID loops improving stability and reducing oscillations under variable load conditions.
-</p>
-<p><strong>Scope:</strong> process control engineering | thermal systems | industrial automation</p>
-</div>
-
-</div>
-</section>
-
-<!-- =========================
-     HIDDEN ATS LAYER (SAFE)
-     ========================= -->
-<div style="display:none;">
-Controls Engineer EPC Mining Automation PLC SCADA DCS Siemens TIA Portal Allen Bradley Studio 5000 PID tuning FAT SAT loop checking commissioning EPC projects Primavera P6 MS Project EVM cost control schedule control industrial furnace vacuum systems MCC VFD instrumentation engineer process control engineering
-</div>
-
 </body>
 </html>
